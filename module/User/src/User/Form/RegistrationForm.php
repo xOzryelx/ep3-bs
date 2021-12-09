@@ -125,7 +125,7 @@ class RegistrationForm extends Form
                 'label' => 'Last name',
             ),
         ));
-
+/*
         $this->add(array(
             'name' => 'rf-street',
             'type' => 'Text',
@@ -149,7 +149,7 @@ class RegistrationForm extends Form
                 'label' => 'Street number',
             ),
         ));
-
+*/
         $this->add(array(
             'name' => 'rf-zip',
             'type' => 'Text',
@@ -161,7 +161,7 @@ class RegistrationForm extends Form
                 'label' => 'Postal code & City',
             ),
         ));
-
+/*
         $this->add(array(
             'name' => 'rf-city',
             'type' => 'Text',
@@ -173,7 +173,7 @@ class RegistrationForm extends Form
                 'label' => 'City',
             ),
         ));
-
+*/
         $this->add(array(
             'name' => 'rf-phone',
             'type' => 'Text',
@@ -420,7 +420,7 @@ class RegistrationForm extends Form
                     array(
                         'name' => 'StringLength',
                         'options' => array(
-                            'min' => 3,
+                            'min' => 1,
                             'message' => 'Your name is somewhat short ...',
                         ),
                     ),
@@ -442,7 +442,7 @@ class RegistrationForm extends Form
                     array(
                         'name' => 'StringLength',
                         'options' => array(
-                            'min' => 3,
+                            'min' => 1,
                             'message' => 'Your last name is somewhat short ...',
                         ),
                     ),
@@ -455,6 +455,7 @@ class RegistrationForm extends Form
                     ),
                 ),
             ),
+/*
             'rf-street' => array(
                 'filters' => array(
                     array('name' => 'StringTrim'),
@@ -555,6 +556,7 @@ class RegistrationForm extends Form
                     ),
                 ),
             ),
+*/
             'rf-phone' => array(
                 'filters' => array(
                     array('name' => 'StringTrim'),
