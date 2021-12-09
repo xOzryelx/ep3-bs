@@ -65,8 +65,8 @@ return array(
     'Do your like our service?' => 'Gefällt Ihnen unser Angebot?',
     'Contact & Feedback' => 'Kontakt & Feedback',
     'Our website' => 'Unsere Internetseite',
-    'Information about' => 'Infos & Bilder über',
-    'Book by phone' => 'Telefonische Buchung',
+    'Information about' => 'Infos & Bilder',
+    'Book by phone' => 'Im Notfall:',
 
     'Imprint' => 'Impressum',
     'Privacy' => 'Datenschutz',

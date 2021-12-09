@@ -22,17 +22,22 @@
                 <a href="<?= $this->basePath('/') ?>" id="logo"></a>
 
                 <div id="label-client"><?= $this->option('client.name.full') ?></div>
-                <div id="label-service"><?= $this->option('service.name.full') ?></div>
+                <div id="label-service"><?= $this->option('service.name.full') ?> <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Achtung: Slots ab 20:00 Uhr bitte lückenlos von früh nach spät buchen - sonst Stornierung!</div>
+		
+<!--
 
                 <?php if ($this->option('service.branding', 'true') == 'true'): ?>
                     <div id="branding">&raquo; <?= sprintf($this->t('Powered by %s'), '<a href="' . $this->option('service.branding.website') .'" target="_blank">' . $this->option('service.branding.name') . '</a>') ?></div>
                 <?php else: ?>
                     <style type="text/css"> #label-client { margin-top: 15px; } </style>
                 <?php endif; ?>
+-->
             </div>
 
             <div id="topbar">
+<!--
                 <?= $this->headerLocaleChoice() ?>
+-->
 
                 <div id="topbar-contact" class="responsive-pass-1">
                     <p>
@@ -60,7 +65,7 @@
                     <p>
                         <span class="light-gray"><?= $this->t('Information about') ?></span><br>
                         <span class="large-text">
-                            <a href="<?= $this->url('service/info') ?>" class="unlined white">
+                            <a href="https://7hgc.de/?page_id=128" class="unlined white">
                                 <?= $this->option('subject.type') ?>
                             </a>
                         </span>
@@ -98,9 +103,19 @@
             <div class="centered-text">
                 <span class="no-wrap">&copy; <?= date('Y') ?> <a href="<?= $this->option('client.website') ?>"><?= $this->option('client.name.full') ?></a></span>
                 (<a href="<?= $this->option('client.website.imprint') ?>"><?= $this->t('Imprint') ?></a><?php if ($this->option('client.website.privacy')): ?> &ndash; <a href="<?= $this->option('client.website.privacy') ?>"><?= $this->t('Privacy') ?></a><?php endif; ?>)
-                <span class="no-wrap">&amp; <a href="<?= $this->option('service.branding.website') ?>"><?= $this->option('service.branding.name') ?></a> (<?= $this->t('Software') ?>)</span>
+         	
+
+<!--  
+<span class="no-wrap"> <br /> test ; </a> </span>              
+<span class="no-wrap">&amp; <a href="<?= $this->option('service.branding.website') ?>"><?= $this->option('service.branding.name') ?></a> (<?= $this->t('Software') ?>)</span>
+-->
             </div>
         </div>
+
+	<div id="header" class=""centered-text" <?= $this->headerAttributes() ?>>
+            <div id="label">
+                <div id="label-service">Achtung: Slots ab 20:00 Uhr bitte lückenlos von früh nach spät buchen - sonst Stornierung!</div>
+	</div>
 
         <script type="text/javascript" src="<?= $this->basePath('js/jquery/jquery.min.js') ?>"></script>
         <script type="text/javascript" src="<?= $this->basePath('js/jquery-ui/jquery-ui.min.js') ?>"></script>

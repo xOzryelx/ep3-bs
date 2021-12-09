@@ -25,7 +25,7 @@ return array(
     'Your token to reset your password is invalid or expired. Please request a new email.'
         => 'Der Code zum Ändern Ihres Passwortes ist ungültig oder abgelaufen. Bitte lassen Sie sich eine neue E-Mail zusenden.',
     'All right, your password has been changed. You can now log into your account.'
-        => 'In Ordnung, Ihr Passwort wurde geändert. Sie können sich nun wieder anmelden.',
+        => 'In Ordnung, Ihr Passwort wurde geändert. Sie können Sie nun wieder anmelden.',
 
     'New registration waiting for activation' => 'Neuer Benutzer wartet auf Aktivierung',
     'A new user has registered to your %s. According to your configuration, this user will not be able to book %s until you manually activate him.'
@@ -146,9 +146,9 @@ return array(
     'Last name' => 'Nachname',
     'Street & Number' => 'Straße und Hausnummer',
     'Street number' => 'Hausnummer',
-    'Postal code & City' => 'Postleitzahl & Ort',
+    'Postal code & City' => 'BDS-Nummer (5024XXXX)',
     'City' => 'Wohnort',
-    'Phone number' => 'Telefonnummer',
+    'Phone number' => 'Mobilfunknummer',
     'Birthday' => 'Geburtstag',
     'This is optional' => 'Diese Angabe ist freiwillig',
 
@@ -164,7 +164,7 @@ return array(
     'This street name contains invalid characters - sorry' => 'Dieser Straßenname enthält ungültige Zeichen',
     'Please type your street number here' => 'Bitte geben Sie Ihre Hausnummer ein',
     'This street number contains invalid characters - sorry' => 'Diese Hausnummer enthält ungültige Zeichen',
-    'Please type your postal code here' => 'Bitte geben Sie Ihre Postleitzahl ein',
+    'Please type your postal code here' => 'Bitte geben Sie eine g�ltige BDS-Mitgliedsnummer ein',
     'Please provide a correct postal code' => 'Bitte geben Sie eine gültige Postleitzahl ein',
     'Please type your city here' => 'Bitte geben Sie Ihren Wohnort ein',
     'This city name is somewhat short ...' => 'Dieser Wohnort ist etwas kurz',
@@ -219,8 +219,8 @@ return array(
     'Welcome to our %s' => 'Willkommen zu unserem %s',
 
     'You probably guessed it: To use our service, that is to book spare %s online, you need to create your own user account first.'
-        => 'Sie haben es sicher schon vermutet: Um unser Angebot nutzen zu können, also um freie %s online buchen zu können, müssen Sie sich vorher ein eigenes Benutzerkonto auf Ihren Namen und Ihre E-Mail Adresse erstellen.',
-    'The registration is of course free of cost and nonbinding.' => 'Die Registrierung ist natürlich kostenlos und unverbindlich.',
+        => 'Du musst dich nur hier registrieren! Dein User wird für alle weiteren Buchungssysteme ürbernommen.',
+    'The registration is of course free of cost and nonbinding.' => 'Die Synchronisierung kann bis zu 5 Minuten dauern.',
 
     'We are very sorry, but the registration is currently not possible.' => 'Entschuldigung, aber die Registrierung ist derzeit nicht möglich.',
 
@@ -252,7 +252,7 @@ return array(
 
     /* Email */
 
-    'Dear' => 'Sehr geehrte/r Herr/Frau',
+    'Dear' => 'Hallo',
     'Hello' => 'Hallo',
     'This was an automated message from the system.' => 'Diese Nachricht wurde automatisch gesendet.',
 	'Originally sent to %s (%s).' => 'Ursprünglich gesendet an %s (%s).',
