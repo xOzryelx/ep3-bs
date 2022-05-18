@@ -56,8 +56,10 @@ class CalendarController extends AbstractActionController
 
             $i++;
 
-            if ($i >= 1000) {
-                throw new \RuntimeException('Too many days are hidden from calendar');
+            if ($i >= 100) {
+		$dateStart = $this->calendarDetermineDate();
+		break;
+                #throw new \RuntimeException('Too many days are hidden from calendar');
             }
         }
 
@@ -76,7 +78,7 @@ class CalendarController extends AbstractActionController
                 $daysToRender++;
 
                 if ($daysToRender > 24) {
-                    throw new \RuntimeException('Too many days are hidden from calendar');
+                    throw new \RuntimeException('Too many days to render');
                 }
             }
         }
