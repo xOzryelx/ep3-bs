@@ -6,6 +6,39 @@ $squareType = $this->option('subject.square.type');
 echo sprintf('<p><span class="green">' . $this->t('This %s is still free.') . '</span></p>', $squareType);
 
 echo $this->squareCapacityInfo($square, $this->quantity);
+$outputPlayerNames = null;
+    if ($user !== null) {
+        // Mitspieler holen
+        foreach ($bookings as $booking) {
+            $reservationOwner = $booking->getExtra('user')->get('alias');
+            if ($outputPlayerNames === null) {
+                $outputPlayerNames = $reservationOwner;
+            } else {
+                $outputPlayerNames .= sprintf(', %1$s', $reservationOwner);
+            }
+            
+            $playerNames = $booking->getMeta('player-names');
+            if ($playerNames) {
+                $playerNames = @unserialize($playerNames);
+                if ($playerNames) {
+                    foreach ($playerNames as $playerData) {
+                        $nameData = trim($playerData['value']);
+                        if ($nameData !== "") {
+                            if ($outputPlayerNames === null) {
+                                $outputPlayerNames = $nameData;
+                            } else {
+                                $outputPlayerNames .= sprintf(', %1$s', $nameData);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+if ($outputPlayerNames != null) {
+        $reason .= sprintf('Bereits angemeldet: %1$s', $outputPlayerNames);
+    }
+echo sprintf($reason);
 
 if ($square->need('status') == 'readonly') {
     if ($square->getMeta('readonly.message')) {
